@@ -1,14 +1,15 @@
+# A Chassis extension to install and activate common WordPress plugins used for debugging during development
 class debugging (
-  $path = "/vagrant/extensions/debugging"
+  $path = '/vagrant/extensions/debugging'
 ) {
   if ! ( File['/vagrant/content'] ) {
-    file { "/vagrant/content":
-      ensure => "directory",
+    file { '/vagrant/content':
+      ensure => 'directory',
     }
   }
   if ! ( File['/vagrant/content/plugins'] ) {
-    file { "/vagrant/content/plugins":
-      ensure => "directory",
+    file { '/vagrant/content/plugins':
+      ensure => 'directory',
     }
   }
   wp::plugin { 'debug-bar':
