@@ -15,5 +15,5 @@ This Chassis extension installs and activates the following plugins:
 
 ## Usage
 1. Follow the VIP Classic setup directions
-2. Add this extension to your extensions directory `cd debugging && git clone git@github.com:stuartshields/vip-debugging.git extensions/vip-debugging`
+2. Add this extension to your extensions directory `git clone git@github.com:stuartshields/vip-debugging.git extensions/vip-debugging`
 3. `vagrant provision` to install the plugins
