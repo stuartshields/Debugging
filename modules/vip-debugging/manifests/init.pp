@@ -1,6 +1,6 @@
 # A Chassis extension to install and activate common WordPress plugins used for debugging during development
-class debugging (
-  $path = '/vagrant/extensions/debugging'
+class vip-debugging (
+  $path = '/vagrant/extensions/vip-debugging'
 ) {
   if ! ( File['/vagrant/content'] ) {
     file { '/vagrant/content':
@@ -33,11 +33,6 @@ class debugging (
     require  => Class['wp'],
   }
   wp::plugin { 'log-deprecated-notices':
-    ensure   => enabled,
-    location => '/vagrant/wp',
-    require  => Class['wp'],
-  }
-  wp::plugin { 'rewrite-rules-inspector':
     ensure   => enabled,
     location => '/vagrant/wp',
     require  => Class['wp'],
